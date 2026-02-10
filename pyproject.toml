@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ytbatch"
+version = "0.1.0"
+description = "Batch search YouTube terms into a run CSV and optionally download audio/video using yt-dlp."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Your Name" }]
+dependencies = [
+  "yt-dlp>=2024.8.6",
+  "platformdirs>=4.2.0",
+]
+
+[project.optional-dependencies]
+gui = [
+  "PySide6>=6.6.0",
+]
+
+[project.scripts]
+ytbatch = "ytbatch.cli:main"
+ytbatch-gui = "ytbatch.gui:main"
+
+[tool.setuptools]
+# Tell setuptools we're doing package discovery, but only inside "ytbatch*"
+packages = { find = { include = ["ytbatch*"], exclude = ["packaging*", "third_party*"] } }
