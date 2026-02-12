@@ -62,7 +62,7 @@ packaging/
 ### 1. Clone
 
 ```bash
-git clone https://github.com/yourname/ytbatch.git
+git clone https://github.com/teezeesak/ytbatch.git
 cd ytbatch
 ```
 
